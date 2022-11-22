@@ -2,15 +2,9 @@ package com.example.demo.game;
 
 public class GameRunner {
 
-/*
-    private MarioGame game;
-    public GameRunner(MarioGame game) {
-        this.game = game;
-    }
-*/
+    private GamingConsole game;
 
-    private SuperContraGame game;
-    public GameRunner(SuperContraGame game) {
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
