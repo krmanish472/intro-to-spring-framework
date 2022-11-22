@@ -1,18 +1,16 @@
 package com.example.demo;
 
 import com.example.demo.game.*;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
-
-        // GamingConsole game = new SuperContraGame();
-        // GamingConsole game = new MarioGame();
-        GamingConsole game = new PackmanGame();
-        // passing object of SuperContraGame
-        GameRunner runner = new GameRunner(game);
+        ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
+        GameRunner runner = context.getBean(GameRunner.class);
         runner.run();
     }
 
